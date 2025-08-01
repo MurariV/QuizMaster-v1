@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Quiz - Add</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'supplement.css') }}">
+  </head>
+  <body class = "login">
+    <div class = "lbox">
+      <div class = "text">
+        <h1>Add Quiz</h1>
+      </div>
+      <br>
+      <form method='POST'>
+        <div class = "input">
+        <select name = "subject">
+          {% for sub in subjects %}
+            <option value = "{{ sub.sname }}">{{sub.sname}}</option>
+          {% endfor %}
+        </select>
+        </div>
+        <div class = "input">
+          <input type = "text" placeholder = "Quiz Name" name = "nm">
+        </div>
+        <div class = "input">
+          <input type = "date" placeholder = "Date of Quiz" name = "doq">
+        </div>
+        <div class = "input">
+            <input type = "integer" placeholder = "Duration of Quiz" name = "dur">
+        </div>  
+        <center class="button">
+          <button type="submit" class = 'btn'>Submit</button>
+      </center>
+      </form>
+    </div>
+  </body>
+</html>

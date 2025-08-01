@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quiz Question - Add</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'supplement.css') }}">
+    </head>
+    <body class = "login">
+        <div class = "lbox">
+        <div class = "text">
+            <h1>Add Question</h1>
+        </div>
+        <br>
+        <form method='POST'>
+            <div class = "input">
+                <select name = "chapter">
+                  {% for Ch in chapters %}
+                    <option value = "{{ Ch.cname }}">{{Ch.cname}}</option>
+                  {% endfor %}
+                </select>
+            </div>
+            <div class = "input">
+                <input type = "Title" placeholder = "Question Title" name = "Qt">
+            </div>
+            <div class = "input">
+                <textarea type = "Statement" placeholder = "Question Statement" name = "Qs"></textarea>
+            </div>
+            <br>
+            <div class = "input">
+                <input type = "subject" placeholder = "Option 1" name = "o1">
+            </div>
+            <div class = "input">
+                <input type = "subject" placeholder = "Option 2" name = "o2">
+            </div>
+            <div class = "input">
+                <input type = "subject" placeholder = "Option 3" name = "o3">
+            </div>
+            <div class = "input">
+                <input type = "subject" placeholder = "Option 4" name = "o4">
+            </div>
+            <div class = "input">
+                <select name = 'ans'>
+                    <option value="1"> 1 </option>
+                    <option value="2"> 2 </option>
+                    <option value="3"> 3 </option>
+                    <option value="4"> 4 </option>
+                </select>
+            </div>
+            <center class="button">
+                <button type="submit" class = 'btn'>Submit</button>
+            </center>
+        </div>
+    </body>
+</html>

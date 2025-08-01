@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quiz Chapter - Edit</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'supplement.css') }}">
+    </head>
+  <body class = "login">
+    <div class = "lbox">
+      <div class = "text">
+        <h1>Edit Chapter</h1>
+      </div>
+      <br>
+      <form method='POST'>
+        <div class = "input">
+          <input type = "chapter" placeholder = "Chpater Name" name = "Ch">
+        </div>
+        <center class="button">
+            <button type="close" class = 'btn'>Close</button>
+            <button type="submit" class = 'btn'>Submit</button>
+        </center>
+      </form>
+    </div>
+  </body>
+</html>
